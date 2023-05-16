@@ -45,7 +45,7 @@ Ruxo Web NUI
 
 * Open all web page you need inside GTA
   - Navigation, cursor and page scroll enabled.
-* Open it with a command or using a trigger.
+
 
 ![NUIa](https://github.com/turangarusso/Ruxo-Web-NUI/assets/113531412/b2539b87-90cd-4131-9c56-d8af10001a02)
 
