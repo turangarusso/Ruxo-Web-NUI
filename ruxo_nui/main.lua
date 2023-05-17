@@ -10,6 +10,7 @@ Citizen.CreateThread(function()
     while not ESX.IsPlayerLoaded() do 
         Citizen.Wait(100)
         TriggerEvent("rxo:nui:off")
+      break
     end
 end)
 
@@ -38,11 +39,9 @@ AddEventHandler('rxo:nui:on', function()
       FreezeEntityPosition(ped, true)
       Citizen.CreateThread(function()
         while true do
-          Wait(0)
+          Wait(500)
           DisableControlAction(0, 1, true) -- LookLeftRight
           DisableControlAction(0, 2, true) -- LookUpDown
-          DisablePlayerFiring(ped, true) -- Disable weapon firing
-          DisableControlAction(0, 142, true) -- MeleeAttackAlternate
           DisableControlAction(0, 106, true) -- VehicleMouseControlOverride
         end
       end)
@@ -57,11 +56,9 @@ AddEventHandler('rxo:nui:on', function()
       FreezeEntityPosition(ped, false)
       Citizen.CreateThread(function()
         while true do
-          Wait(0)
+          Wait(500)
           EnableControlAction(0, 1, true) -- LookLeftRight
           EnableControlAction(0, 2, true) -- LookUpDown
-          DisablePlayerFiring(ped, false) -- Disable weapon firing
-          EnableControlAction(0, 142, true) -- MeleeAttackAlternate
           EnableControlAction(0, 106, true) -- VehicleMouseControlOverride
         end
       end)
@@ -82,11 +79,9 @@ AddEventHandler('rxo:nui:off', function()
     FreezeEntityPosition(ped, false)
     Citizen.CreateThread(function()
       while true do
-        Wait(0)
+        Wait(500)
         EnableControlAction(0, 1, true) -- LookLeftRight
         EnableControlAction(0, 2, true) -- LookUpDown
-        DisablePlayerFiring(ped, false) -- Disable weapon firing
-        EnableControlAction(0, 142, true) -- MeleeAttackAlternate
         EnableControlAction(0, 106, true) -- VehicleMouseControlOverride
       end
     end)
